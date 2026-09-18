@@ -1,0 +1,118 @@
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+  @import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-brand-green: #2F6F59;
+  --color-brand-green-dark: #1F4F40;
+  --color-brand-green-light: #DCEBE1;
+  --color-brand-amber: #D6A546;
+  --color-brand-red: #D85C4A;
+  --color-surface-bg: #F3F0E8;
+  --color-surface-card: #FFFDF8;
+  --color-text-main: #19352F;
+  --color-text-muted: #6D7771;
+  --color-border-line: #DDDCD2;
+  --font-sans: 'DM Sans', sans-serif;
+}
+
+:root {
+  --brand-green: #2F6F59;
+  --brand-green-dark: #1F4F40;
+  --brand-green-light: #DCEBE1;
+  --brand-amber: #D6A546;
+  --brand-red: #D85C4A;
+  --surface-bg: #F3F0E8;
+  --surface-card: #FFFDF8;
+  --text-main: #19352F;
+  --text-muted: #6D7771;
+  --border-line: #DDDCD2;
+}
+
+body {
+  background-color: var(--surface-bg);
+  color: var(--text-main);
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+html,
+#root {
+  min-height: 100%;
+  width: 100%;
+}
+
+.liquid-glass {
+  background: rgba(0, 0, 0, 0.4);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.1) 80%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.18);
+  color: var(--text-main);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Utility for hiding scrollbar but allowing scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
