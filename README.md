@@ -2,9 +2,14 @@
 
 CarbonTrack is a lightweight personal carbon-footprint tracker for the **Climate Tech** track. It helps users log everyday transport, energy, and food activities, estimate their CO₂ impact, and monitor progress toward a weekly target.
 
+## Hackathon ID
+
+**AZIS-9CF8RB**
+
 ## Track
 
 **Climate Tech**
+
 
 ## Features
 
